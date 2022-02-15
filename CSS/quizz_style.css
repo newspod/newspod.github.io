@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+#form {
+    margin: 0px; padding: 0px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.form_section {
+    font-size: 32px;
+    padding: 30px 0px;
+}
+.quis_row {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0px;
+    margin: auto;
+}
+.quis_desc, .quis_low, .quis_high, .quis_col {
+    display: inline-block;
+}
+.quis_desc {
+    width: 200px;
+}
+.quis_low, .quis_high {
+    width: 100px;
+    font-family: serif;
+}
+.quis_col {
+    width: 50px;
+    text-align: center;
+}
+.quis_title_row {
+    font-size: 20px;
+    padding-top: 20px;
+}
+.free_response_area {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 15px;
+    height: 80px;
+    padding: 10px;
+}
+.binary_quesion {
+    margin: 20px 0px;
+}
+.binary_quesion {
+    font-size: 20px;
+}
+.comprehension_title {
+    font-size: 20px;
+}
+.comprehension_question {
+    padding: 20px 0px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #555;
+}
+.comprehension_question .comp_input {
+    border: 0px;
+    border-bottom: 1px solid #a0a0a0;
+    margin-left: 20px;
+    margin-top: 3px;
+    padding: 3px 3px;
+}
+.comprehension_question .comp_input:focus {
+    border-bottom: 2px solid #000;
+}
+.story_name {
+    font-style: italic;
+    border-bottom: 1px solid black;
+    padding-bottom: 2px;
+}
+#submit_form {
+    text-transform: uppercase;
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    font-size: 20px;
+    background: rgb(130, 200, 235);
+    border: 0px;
+    padding: 15px 20px;
+    margin-top: 30px;
+    color: #666;
+    cursor: pointer;
+}
+#submit_form:hover {
+    color: #444;
+}
+#completed, #error {
+    padding: 20px 10px;
+    background: #f0f0f0;
+    border-bottom: 1px solid #a0a0a0;
+    text-align: center;
+    display: none;
+}
+.explanation {
+    font-family: serif;
+    font-size: 16px;
+    margin-top: -25px;
+    color: #666;
+    margin-bottom: 25px;
+}
+#comprehension_container {
+    text-align: left;
+    width: 680px;
+    margin: auto;
+}
+.comp_question, .user_question {
+    margin: 15px 0px;
+}
+.user_question i {
+    font-size: 18px;
+}
+.comp_question .ques {
+    font-weight: 700;
+    font-size: 20px;   
+}
+.comp_question .cques_ans {
+    padding: 5px;
+}

@@ -1,3 +1,99 @@
 <html>
-The demo is coming shortly.
+    <head>
+        <title>NewsPod Interactive Podcast</title>
+        <link rel="stylesheet" href="CSS/quizz_style.css?f">
+        <link rel="stylesheet" href="CSS/podcast.css?e">
+        <!-- <script type="text/javascript" src="/JS/live.js"></script> -->
+    </head>
+    <body class="muted">
+        <div id="intro_menu">
+            <div id="intro_header">NewsPod Introduction</div>
+            <div class="center">Welcome to the demo of the NewsPod system, accompanying the IUI22 paper:<br /><br />
+                <a href="https://tingofurro.github.io/pdfs/IUI2022_NewsPod.pdf" target="_new">NewsPod: Automatic and Interactive News Podcasts</a><br /><br />
+                The demo runs on the pre-computed news segments from the Usability Studies A and B from the paper. The interactive feature allowing podcast listeners to ask questions is disabled in this demo.<br /><br /><br /> 
+            
+            </div>
+            <div class="center">
+                <button class="intro_button" onclick="$('#intro_menu').hide(); $('#starter_menu').show();">Get Started!</button>
+            </div>
+        </div>
+        <div id="starter_menu">
+            <div id="podcast_title">
+                Podcast Selection
+            </div>
+            <div class="center">
+                Select <b>4</b> stories to include in the podcast.
+            </div>
+            <div id="story_selection">
+
+            </div>
+            <div class="warning_message"></div>
+            <div class="center">
+                <button class="starter_button" onclick="start_podcast();" disabled>Play</button>
+            </div>
+        </div>
+        <div id="main_section_name"></div>
+        <div id="transcript" class="hidden_transcript">
+            <div id="transcript_header">
+                <img src="images/icons/transcript.svg" alt="Transcript"> Transcript
+                <img src="images/close.svg" alt="X" class="close_icon" onclick="$('#transcript').toggleClass('hidden_transcript');">
+            </div>
+            <div id="transcript_content"></div>
+        </div>
+        <div id="wave">
+            <div id="col1" class="col"></div>
+            <div id="col2" class="col"></div>
+            <div id="col3" class="col"></div>
+            <div id="col4" class="col"></div>
+            <div id="col5" class="col"></div>
+        </div>
+        <div id="footer">
+
+            <div id="in_progress_input"></div>
+            <div id="progress_bar">
+                <div id="pb_back">&nbsp;</div>
+                <div id="pb_content"></div>
+            </div>
+            
+            <div id="controls_container">
+                <img src="images/icons/double-right-arrow.svg" id="prev_arrow" onclick="section_move_study(-1);">
+                <img src="images/icons/pause.svg" id="pause_play" onclick="pause_play();" alt="Pause/Play">
+                <img src="images/icons/double-right-arrow.svg" id="next_arrow" onclick="section_move_study(1);">
+
+                <img src="images/icons/transcript.svg" alt="Transcript" id="transcript_icon" onclick="$('#transcript').toggleClass('hidden_transcript');">
+            </div>
+
+        </div>
+        <div id="empty_podcast_template" class="template">
+            <div id="main">
+                <div id="intro"></div>
+                <div id="event_table"></div>
+            </div>
+        </div>
+        <div id="event_section_template" class="template">
+            <div class="event_section event_{{story_id}}">
+                <div class="event_header">
+                    <div class="progress_bar">&nbsp;</div>
+                    <div class="event_name">{{story_name}}</div>
+                </div>
+                <div class="content"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="JS/lib/jquerymin.js"></script>
+        <script type="text/javascript" src="JS/lib/jquery.cookie.js"></script>
+        <!-- <script type="text/javascript" src="/JS/lib/jquery.raty.js"></script> -->
+        <script type="text/javascript" src="JS/lib/mustache.js"></script>
+        <script type="text/javascript" src="JS/url.js?a"></script>
+        <script type="text/javascript" src="JS/podcast.js?c"></script> <!-- The only one that changes -->
+        <script type="text/javascript" src="JS/podcast_data.js"></script>
+        <script type="text/javascript" src="JS/podcast_planner.js"></script>
+        <script type="text/javascript" src="JS/wave.js"></script>
+        <script type="text/javascript" src="JS/speech_engine.js"></script>
+        <script type="text/javascript" src="JS/recognition_engine.js"></script>
+        <script type="text/javascript" src="JS/speech_normalize.js"></script>
+        <script type="text/javascript" src="JS/paraphrase_engine.js"></script>
+        <script type="text/javascript">
+            init();
+        </script>        
+    </body>
 </html>
